@@ -17,8 +17,8 @@ export default {
   data(){
     return {
       config:{
-        baseURL: '/backend/magic/web',    //配置后台服务
-        serverURL: '/backend/',    //配置接口实际路径
+        baseURL: 'https://backend.ssssssss.org:9998/magic/web',    //配置后台服务
+        serverURL: 'https://backend.ssssssss.org:9998/',    //配置接口实际路径
         autoSave: false,
         checkUpdate: false,
         defaultTheme: 'dark'
