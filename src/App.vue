@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <magic-editor :config="config"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// 引入组件
+import MagicEditor from 'magic-editor'
+// 引入样式
+import 'magic-editor/dist/magic-editor.css'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MagicEditor
+  },
+  data(){
+    return {
+      config:{
+        baseURL: '/backend/magic/web',    //配置后台服务
+        serverURL: '/backend/',    //配置接口实际路径
+        autoSave: false,
+        checkUpdate: false,
+        defaultTheme: 'dark'
+        // 其它配置请参考文档
+      }
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html,body,#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 </style>
